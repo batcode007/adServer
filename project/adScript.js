@@ -12,5 +12,7 @@ fetch('https://rvwfo4bv9b.execute-api.us-east-1.amazonaws.com/render/getJS?divId
   .then(data => {
     console.log(data);
     // return (()=>data)();
+    // let t = eval(data);
+    // return t.then(res=>console.log('re',eval(res)));
     return eval(data);
   });
