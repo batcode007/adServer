@@ -1,7 +1,10 @@
 exports.handler = async (event) => {
   console.log(event);
+  
+  //user authorisation, if needed
+
   //extract divId from the query parameter
-  let divId = event.queryStringParameters && event.queryStringParameters.divId;
+  const divId = event.queryStringParameters && event.queryStringParameters.divId;
   if(!divId){
     //throw an error
     throw new Error("Div id not received");
