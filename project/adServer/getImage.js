@@ -9,7 +9,7 @@ exports.handler = async (event) => {
   }
 
   //JS snippet to create a new img element in HTML and append the image in the given div block
-  let returnVal = `const div = document.getElementById(${divId});
+  let returnVal = `const div = document.getElementById('${divId}');
     const imageElement = document.createElement('img')
     imageElement.src = '${imageURL}';
     div.appendChild(imageElement);`;
