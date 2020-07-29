@@ -16,14 +16,20 @@ exports.handler = async (event) => {
   const fetchImageApi = `https://rvwfo4bv9b.execute-api.us-east-1.amazonaws.com/getImage?divId=${divId}`;
 
   //JS snippet that will be returned and will make a new call to another API
-  const result = `fetch(${fetchImageApi})
+  const result = `fetch('${fetchImageApi}')
       .then(response => response.json())
-      .then(data => (function(){console.log(data)})()
-      )`;
+      .then(data => {
+        console.log(data);
+        return eval(data);
+    })`;
 
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify(result),
+    const response = {
+      headers: {
+          'Content-Type': 'application/json',
+          "Access-Control-Allow-Origin": "*",
+      },
+      statusCode: 200,
+      body: JSON.stringify(result)
   };
   return response;
 };

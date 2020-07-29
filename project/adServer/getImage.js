@@ -14,9 +14,15 @@ exports.handler = async (event) => {
     imageElement.src = '${imageURL}';
     div.appendChild(imageElement);`;
 
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify(returnVal)
+    const response = {
+      headers: {
+          'Content-Type': 'application/json',
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers" : "*",
+          "Access-Control-Allow-Methods": "*"
+      },
+      statusCode: 200,
+      body: JSON.stringify(returnVal)
   };
   return response;
 };
