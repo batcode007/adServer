@@ -1,0 +1,23 @@
+{
+  "name": "adserver",
+  "version": "1.0.0",
+  "description": "This repo contains an adServer folder and an adScript file. This is used to append an image dynamically to an existing div element on the page.",
+  "main": "longRunningApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batcode007/adServer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/batcode007/adServer/issues"
+  },
+  "homepage": "https://github.com/batcode007/adServer#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "html": "^1.0.0"
+  }
+}
